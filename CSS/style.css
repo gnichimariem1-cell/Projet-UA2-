@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #0b1c2c;
+    color: white;
+    line-height: 1.6;
+
+}
+
+.page-content {
+    flex: 1;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #081520;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        max-width: 100%;
+        text-align: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+    }
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4b400;
+}
+
+/* PAGE ACCUEIL */
+.hero {
+    padding: 80px 50px;
+    background: #0b1c2c;
+    background-image: url('/assets/robo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+@media (max-width: 640px) {
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 48px 24px;
+        min-height: 70vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    background: #0077ff;
+}
+
+.btn:hover {
+    background: #005ed1;
+}
+
+
+.presentation {
+    padding: 60px 40px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.presentation h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: #0b1c2c;
+}
+
+.presentation p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.services {
+    padding: 60px 40px;
+    background: #0b1c2c;
+    text-align: center;
+}
+
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+ 
+}
+
+.service-card {
+  background: #0f2c44;
+  padding: 25px 20px;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  cursor: pointer;
+
+  
+  transition: 
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.service-card:hover {
+  background-color: #153e5f;
+  transform: scale(1.04);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.service-card img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service-card p {
+    font-size: 16px;
+    max-width: auto;
+}
+
+/* PAGE A PROPOS */
+.about-hero {
+    background: #0b1c2c;
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.about-hero p {
+    font-size: 20px;
+    color: #d9d9d9;
+}
+
+.mission {
+    padding: 60px 40px;
+    text-align: center;
+    background: white;
+    color: black;
+}
+
+.mission p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.team {
+    padding: 60px 40px;
+    background: #081520;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-container :hover {
+    background: white;
+    color: black;
+
+}
+
+.member {
+    text-align: center;
+    background: #0f2c44;
+    padding: 20px;
+    border-radius: 10% 0%;
+    width: 220px;
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+}
+ 
+.member:hover {
+    background: white;
+    color: black;
+    transform: scale(1.08); 
+}
+
+.member img {
+
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10% 0%;
+
+}
+
+.member h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    padding: auto;
+}
+
+.member p {
+    font-size: 16px;
+}
+
+.values {
+    padding: 60px 40px;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+.values h2 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #0b1c2c;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.value {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 25px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease
+      
+}
+
+.value:hover {
+    background: #f4f4f4;
+    color: black;
+    transform: scale(1.2);
+    
+}
+.value h3 {
+    margin-bottom: 12px;
+    color: #0b1c2c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #081520;
+    color: white;
+}
+
+
+/* PAGE CONTACTS */
+.contact-hero {
+
+    padding: 15px;
+    text-align: center;
+    background: #0b1c2c;
+
+}
+
+.contact-container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px;
+}
+
+@media (max-width: 640px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+    }
+}
+
+.contact-info,
+.contact-hours,
+.contact-form {
+
+    background: #0f2c44;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+
+.contact-hours table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.contact-hours th,
+.contact-hours td {
+
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.contact-form button {
+
+    background: #0077ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.contact-form button:hover {
+
+    background: #005ed1;
+
+}
