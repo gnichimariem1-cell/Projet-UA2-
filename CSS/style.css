@@ -217,7 +217,7 @@ nav ul li a:hover {
 
 .service-card p {
     font-size: 16px;
-    max-width: auto;
+    
 }
 
 /* PAGE A PROPOS */
@@ -301,7 +301,7 @@ nav ul li a:hover {
 .member h3 {
     font-size: 22px;
     margin-bottom: 8px;
-    padding: auto;
+    
 }
 
 .member p {
