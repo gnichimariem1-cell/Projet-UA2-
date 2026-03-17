@@ -1,9 +1,11 @@
+/* Réinitialisation des marges et paddings par défaut */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Style général du body */
 body {
     display: flex;
     flex-direction: column;
@@ -12,14 +14,15 @@ body {
     background: #0b1c2c;
     color: white;
     line-height: 1.6;
-
 }
 
+/* Contenu principal qui prend tout l'espace disponible */
 .page-content {
     flex: 1;
     display: block;
 }
 
+/* Style du header / navbar */
 header {
     display: flex;
     justify-content: space-between;
@@ -30,6 +33,7 @@ header {
     top: 0;
 }
 
+/* Logo */
 .logo {
     display: inline-flex;
     align-items: center;
@@ -41,11 +45,13 @@ header {
     width: auto;
 }
 
+/* Barre de navigation */
 .navbar {
     display: flex;
     align-items: center;
 }
 
+/* Navbar responsive sur petits écrans */
 @media (max-width: 640px) {
     .navbar {
         max-width: 100%;
@@ -59,15 +65,15 @@ header {
     }
 }
 
+/* Liste des liens de navigation */
 nav ul {
     display: flex;
     align-items: center;
     gap: 32px;
     list-style: none;
-
 }
 
-
+/* Style des liens */
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -75,11 +81,14 @@ nav ul li a {
     transition: 0.3s;
 }
 
+/* Couleur au survol des liens */
 nav ul li a:hover {
     color: #f4b400;
 }
 
-/* PAGE ACCUEIL */
+/* ===================== PAGE ACCUEIL ===================== */
+
+/* Section héro avec image de fond */
 .hero {
     padding: 80px 50px;
     background: #0b1c2c;
@@ -94,10 +103,12 @@ nav ul li a:hover {
     text-align: center;
 }
 
+/* Texte de la section héro */
 .hero-text {
     max-width: 50%;
 }
 
+/* Responsive pour la section héro */
 @media (max-width: 640px) {
     .hero-text {
         max-width: 100%;
@@ -110,24 +121,27 @@ nav ul li a:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
-
     }
 
+    /* Carte de service en pleine largeur sur mobile */
     .service-card {
         width: 100%;
     }
 }
 
+/* Titre principal du héro */
 .hero-text h1 {
     font-size: 42px;
     margin-bottom: 20px;
 }
 
+/* Paragraphe du héro */
 .hero-text p {
     font-size: 18px;
     margin-bottom: 25px;
 }
 
+/* Bouton d'appel à l'action */
 .btn {
     display: inline-block;
     padding: 12px 22px;
@@ -140,11 +154,12 @@ nav ul li a:hover {
     background: #0077ff;
 }
 
+/* Couleur du bouton au survol */
 .btn:hover {
     background: #005ed1;
 }
 
-
+/* Section présentation */
 .presentation {
     padding: 60px 40px;
     text-align: center;
@@ -164,47 +179,48 @@ nav ul li a:hover {
     font-size: 18px;
 }
 
+/* Section services */
 .services {
     padding: 60px 40px;
     background: #0b1c2c;
     text-align: center;
 }
 
-
 .services h2 {
     font-size: 36px;
     margin-bottom: 40px;
 }
 
+/* Conteneur des cartes de services */
 .service-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
- 
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+/* Carte de service individuelle */
 .service-card {
-  background: #0f2c44;
-  padding: 25px 20px;
-  border-radius: 12px;
-  flex: 1 1 300px;
-  cursor: pointer;
-
-  
-  transition: 
-    transform 0.25s ease,
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
-  will-change: transform;
+    background: #0f2c44;
+    padding: 25px 20px;
+    border-radius: 12px;
+    flex: 1 1 300px;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+    will-change: transform;
 }
 
+/* Effet au survol de la carte */
 .service-card:hover {
-  background-color: #153e5f;
-  transform: scale(1.04);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    background-color: #153e5f;
+    transform: scale(1.04);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
+/* Image dans la carte */
 .service-card img {
     width: 100px;
     margin-bottom: 15px;
@@ -217,10 +233,11 @@ nav ul li a:hover {
 
 .service-card p {
     font-size: 16px;
-    
 }
 
-/* PAGE A PROPOS */
+/* ===================== PAGE À PROPOS ===================== */
+
+/* Section héro de la page À propos */
 .about-hero {
     background: #0b1c2c;
     text-align: center;
@@ -232,6 +249,7 @@ nav ul li a:hover {
     color: #d9d9d9;
 }
 
+/* Section mission */
 .mission {
     padding: 60px 40px;
     text-align: center;
@@ -245,6 +263,7 @@ nav ul li a:hover {
     font-size: 18px;
 }
 
+/* Section équipe */
 .team {
     padding: 60px 40px;
     background: #081520;
@@ -256,6 +275,7 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
+/* Conteneur des membres */
 .team-container {
     display: flex;
     justify-content: center;
@@ -266,9 +286,9 @@ nav ul li a:hover {
 .team-container :hover {
     background: white;
     color: black;
-
 }
 
+/* Carte d'un membre de l'équipe */
 .member {
     text-align: center;
     background: #0f2c44;
@@ -279,35 +299,34 @@ nav ul li a:hover {
         transform 0.3s ease,
         background-color 0.3s ease,
         color 0.3s ease;
-
 }
- 
+
+/* Effet au survol d'un membre */
 .member:hover {
     background: white;
     color: black;
-    transform: scale(1.08); 
+    transform: scale(1.08);
 }
 
+/* Photo du membre */
 .member img {
-
     width: 100%;
     height: 70%;
     object-fit: cover;
     display: block;
     border-radius: 10% 0%;
-
 }
 
 .member h3 {
     font-size: 22px;
     margin-bottom: 8px;
-    
 }
 
 .member p {
     font-size: 16px;
 }
 
+/* Section valeurs */
 .values {
     padding: 60px 40px;
     background: white;
@@ -321,6 +340,7 @@ nav ul li a:hover {
     color: #0b1c2c;
 }
 
+/* Conteneur des valeurs */
 .values-container {
     display: flex;
     justify-content: center;
@@ -328,27 +348,28 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-
+/* Carte d'une valeur */
 .value {
     width: 250px;
     background: #f4f4f4;
     padding: 25px 20px;
     border-radius: 10px;
-    transition: transform 0.3s ease
-      
+    transition: transform 0.3s ease;
 }
 
+/* Effet au survol d'une valeur */
 .value:hover {
     background: #f4f4f4;
     color: black;
     transform: scale(1.2);
-    
 }
+
 .value h3 {
     margin-bottom: 12px;
     color: #0b1c2c;
 }
 
+/* Pied de page */
 footer {
     text-align: center;
     padding: 20px;
@@ -356,24 +377,24 @@ footer {
     color: white;
 }
 
+/* ===================== PAGE CONTACT ===================== */
 
-/* PAGE CONTACTS */
+/* Section héro de la page Contact */
 .contact-hero {
-
     padding: 15px;
     text-align: center;
     background: #0b1c2c;
-
 }
 
+/* Grille des 3 blocs de contact */
 .contact-container {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 60px;
 }
 
+/* Responsive sur mobile : une colonne */
 @media (max-width: 640px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -382,57 +403,50 @@ footer {
     }
 }
 
+/* Style commun des 3 blocs */
 .contact-info,
 .contact-hours,
 .contact-form {
-
     background: #0f2c44;
     padding: 25px;
     border-radius: 10px;
-
 }
 
+/* Tableau des horaires */
 .contact-hours table {
-
     width: 100%;
     border-collapse: collapse;
-
 }
 
 .contact-hours th,
 .contact-hours td {
-
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-
 }
 
+/* Champs du formulaire */
 .contact-form input,
 .contact-form textarea {
-
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-
 }
 
+/* Bouton d'envoi */
 .contact-form button {
-
     background: #0077ff;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
 }
 
+/* Couleur du bouton au survol */
 .contact-form button:hover {
-
     background: #005ed1;
-
 }
