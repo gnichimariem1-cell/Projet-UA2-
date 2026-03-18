@@ -21,7 +21,15 @@ body {
     flex: 1;
     display: block;
 }
+.service-card ul {
+    list-style: none;   /* ❌ enlève les points */
+    padding-left: 0;    /* aligne à gauche */
+}
 
+.service-card ul li {
+    margin-bottom: 8px;
+    color: #d6e3ea;
+}
 /* Style du header / navbar */
 header {
     display: flex;
