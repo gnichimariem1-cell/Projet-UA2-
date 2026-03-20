@@ -94,6 +94,7 @@ nav ul li a {
 /* Couleur au survol des liens */
 nav ul li a:hover {
     color: #f4b400;
+    text-decoration: underline;
 }
 
 /* ===================== PAGE ACCUEIL ===================== */
